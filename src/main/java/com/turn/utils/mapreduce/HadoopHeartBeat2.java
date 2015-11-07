@@ -2,7 +2,7 @@
  * Copyright (C) 2014-2015 Turn, Inc.  All Rights Reserved.
  * Proprietary and confidential.
  */
-package com.turn.datamine.utils.mapreduce;
+package com.turn.utils.mapreduce;
 
 import java.util.Timer;
 import java.util.TimerTask;

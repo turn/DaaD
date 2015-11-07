@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.turn</groupId>
 	<version>0.9.0-alpha</version>
-	<name>Run an application as a Hadoop mapper task</name>
+	<name>Deploy application as data</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
