@@ -21,9 +21,8 @@ Here we use the HDFS as the distributed file system. We employ a typical MapRedu
 
 1. Data preparation: We upload the data to the HDFS
 
-		```
 		hadoop dfs -put /local/path/to/data/file /dfs/path/to/data/file
-		```
+
 2. Application Code deployment: 
 	* Programming - WordCount.java
 		- To enable the configuration specification, it is necessary to implement org.apache.hadoop.util.Tool
@@ -37,16 +36,15 @@ Here we use the HDFS as the distributed file system. We employ a typical MapRedu
 		$ jar cf wc.jar WordCount*.class
 		```
 	* Upload the jar file to the HDFS
+
 		hadoop dfs -put wc.jar /dfs/path/to/jar/file
 		
 3. Implement a launcher and deploy it in the client side (an implementation of the launcher can be found at https://github.com/turn/DaaD) 
 
 4. Run the job from the client:
 
-		```
 		hadoop jar /local/path/to/launcher/jar com.turn.utils.mapreduce.RunAppAsMapTask /dfs/path/to/jar/ WordCount /dfs/input/file /dfs/output/file
-		```
+
 5. Check the progress and the result 
 	* The launcher is a map-only job, whose single map task starts the wordcount job as another MapReduce job. 
 	* 	The job progress can be found in the log of the launcher’s map task.
-
